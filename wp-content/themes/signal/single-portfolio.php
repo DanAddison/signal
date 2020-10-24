@@ -14,30 +14,19 @@ get_header(); ?>
 		
 		<div class="row row--pad">
 			<article class="post post--portfolio">
-
-				<?php if( ! empty( get_field('project_image') ) ) : ?>
-				<div class="project__image"></div>
-				<?php endif; ?>
-
-				<header class="post__header">
-
-					<h1 class="post__title">
-						<?php the_title(); ?>
-					</h1>
-
-					<?php // get_template_part( 'parts/project-categories' ); ?>
-
-				</header>
 				
-				<div class="post__entry">
-				
-					<?php the_content(); ?>
-				
+				<div class="post__entry">		
+					<?php the_content(); ?>	
+				</div>			
+
+				<?php if( has_term( '', 'ct_portfolio_category' ) ) : ?>
+				<div href="" class="post__categories">
+					<p class="title">Project Categories:</p>
+					<?php echo get_the_term_list( get_the_ID(), 'ct_portfolio_category', '', ' &sol; ' ); ?>
 				</div>
+				<?php endif; ?>
 			
 			</article>
-
-			<?php // get_sidebar(); ?>
 
 		</div>
 

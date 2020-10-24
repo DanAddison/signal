@@ -103,29 +103,6 @@ if ( ! function_exists( 'signal_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'signal_setup' );
 
-/**
- * Enqueue scripts and styles.
- */
-function signal_scripts() {
-	// styles
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/compiled/style.css', array(), '1.0.7', 'all' );
-	// enqueue google fonts
-	wp_enqueue_style( 'signal-fonts', 'https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab&display=swap' );
-
-	// scripts
-	wp_enqueue_script( 'footer-scripts', get_template_directory_uri() . '/assets/compiled/footer.js', array('jquery'), '1.0.4', true );
-
-	// cookie consent scripts provided by https://www.osano.com/cookieconsent/download/
-	wp_enqueue_script( 'cookies-scripts', 'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js' );
-	// there is also a JS partial required for this
-
-	// only load comments script if needed
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'signal_scripts' );
-
 
 /**
  * Utility functions - eg. ppr()
@@ -136,6 +113,11 @@ require get_template_directory() . '/functions/utility-functions.php';
  * Implement the Custom Header feature.
  */
 // require get_template_directory() . '/functions/custom-header.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
+require get_template_directory() . '/functions/enqueue-assets.php';
 
 /**
  * Custom template tags for this theme.

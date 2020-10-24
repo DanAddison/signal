@@ -16,7 +16,7 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 
 			<header class="taxonomy-archive__header">
-				<h1 class="taxonomy-archive__title "><?php single_term_title(); ?></h1>
+				<h1 class="taxonomy-archive__title ">Category: <?php single_term_title(); ?></h1>
 				<!-- the description for an author, post type, or term archive -->
 				<div class="taxonomy-archive__description"><?php the_archive_description(); ?></div>
 			</header>
@@ -38,7 +38,7 @@ get_header(); ?>
 							<a href="<?php the_permalink() ?>">
 	
 								<div class="portfolio-summary__image">
-									<?php echo wp_get_attachment_image( get_field('project_image'), cover_s ); ?>
+									<?php echo wp_get_attachment_image( get_field('project_image'), 'signal_cropped' ); ?>
 								</div>
 
 								<div class="portfolio-summary__overlay">

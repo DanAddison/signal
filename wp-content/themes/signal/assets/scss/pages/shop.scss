@@ -1,13 +1,13 @@
 // restrict width of catalog and single product pages
 .row--woo {
-  max-width: $shop-width;
+  max-width: $layout-width;
 }
 
 // also target other woo templates which don't receive my .row-woo div from the 'before main content' hook
 .woocommerce-cart .page .row,
 .woocommerce-checkout .page .row,
 .woocommerce-account .page .row {
-  max-width: $shop-width;
+  max-width: $layout-width;
 }
 
 .woocommerce-products-header {

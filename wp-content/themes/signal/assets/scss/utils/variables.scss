@@ -8,9 +8,7 @@ $bp-l: 56.25em; // 900
 $bp-xl: 68.75em; // 1100
 $bp-xxl: 81.25em; // 1300
 
-$content-max-width: 850px; // has to be in pixels else headings will be wider
-$shop-width: 112.5em; // 1800px
-$max-width: 137.5em; // 2200px
+$layout-width: 1800px; // 1800px
 $bp-menu: 62.5em;
 $bp-columns: $bp-l;
 
@@ -26,7 +24,7 @@ $bp-sizes: (
   bp-l: $bp-l,
   bp-xl: $bp-xl,
   bp-xxl: $bp-xxl,
-  bp-menu: $bp-menu
+  bp-menu: $bp-menu,
 );
 
 /*------------------------------------*\
@@ -95,7 +93,7 @@ $colors: (
   white: $white,
   black: $black,
   grey: var(--grey-font-color),
-  primary: $primary
+  primary: $primary,
 );
 
 @each $name, $color in $colors {

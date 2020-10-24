@@ -7,7 +7,7 @@
             "label": "Project Featured Image",
             "name": "project_image",
             "type": "image",
-            "instructions": "Full width responsive image, cropped to aspect ratio of 10:6.\r\nAlso used to represent this project as a summary image in category archives.",
+            "instructions": "Thumbnail image used to represent this project as a preview tile on Portfolio archive pages.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -37,12 +37,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1573292804
+    "modified": 1603543724
 }

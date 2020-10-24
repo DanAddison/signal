@@ -136,7 +136,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "ct_project_category",
+                    "taxonomy": "ct_portfolio_category",
                     "field_type": "checkbox",
                     "add_term": 1,
                     "save_terms": 0,
@@ -163,7 +163,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1573296458
+    "modified": 1603546182
 }

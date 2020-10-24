@@ -18,6 +18,7 @@ function signal_allowed_block_types() {
 		'core/media-text',
 		'core/separator',
 		'core/shortcode',
+		'core/social-links',
 		'core-embed/twitter',
 		'core-embed/instagram',
 		'core-embed/soundcloud',
@@ -30,8 +31,8 @@ function signal_allowed_block_types() {
 		'acf/spacing',
 		'acf/project-meta',
 		// 'acf/page-heading',
-		'acf/link-card',
-		'acf/cover-image'
+		// 'acf/link-card',
+		// 'acf/cover-image'
 		);
 }
 add_filter( 'allowed_block_types', 'signal_allowed_block_types', 10, 2 );
@@ -56,13 +57,6 @@ add_theme_support( 'editor-styles' );
  */
 add_theme_support( 'responsive-embeds' );
 
-/**
- * Enqueue my own block editor styles
- */
-function signal_block_editor_styles() {
-	wp_enqueue_style( 'signal-editor-styles', get_stylesheet_directory_uri() . '/assets/compiled/editor-styles.css', array(), '1.0.0', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'signal_block_editor_styles' );
 
 /**
  * Custom font sizing

@@ -35,7 +35,7 @@ get_header(); ?>
 							<a href="<?php the_permalink() ?>">
 	
 								<div class="portfolio-summary__image">
-									<?php echo wp_get_attachment_image( get_field('project_image'), cover_s ); ?>
+									<?php echo wp_get_attachment_image( get_field('project_image'), 'signal_cropped' ); ?>
 								</div>
 
 								<div class="portfolio-summary__overlay">

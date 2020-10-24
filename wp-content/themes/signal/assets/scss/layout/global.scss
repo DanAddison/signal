@@ -16,7 +16,7 @@
 *********************************************************/
 .row {
   @include center-block;
-  max-width: $max-width;
+  max-width: $layout-width;
 }
 
 .row--pad {

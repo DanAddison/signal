@@ -1,0 +1,12 @@
+/* 
+* My custom styles for the GB block editor interface 
+*/
+
+.wp-block {
+  max-width: 1800px;
+}
+
+// remove emphasis from the page title
+.editor-post-title__block {
+  opacity: 0.4;
+}

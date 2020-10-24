@@ -12,6 +12,10 @@ A personal creative portfolio, built upon WordPress.
 
 ## Requirements
 
+Gulp process is currently using node v11.6.0 (npm v6.9.0).
+
+Run 'npm install' from within the wp-content/themes/gulp-dev directory, then run 'gulp' for browser-sync and asset compilation.
+
 ## Commands
 
 ## CSS

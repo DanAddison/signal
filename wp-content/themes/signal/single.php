@@ -15,8 +15,6 @@ get_header(); ?>
 		
 		<div class="row">
 			<article class="post">
-
-				<?php get_template_part('parts/lazy-image'); ?>
 	
 				<?php get_template_part('parts/post-header'); ?>
 				

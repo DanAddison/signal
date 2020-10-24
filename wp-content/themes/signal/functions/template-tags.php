@@ -43,11 +43,11 @@ if ( ! function_exists( 'signal_posted_on' ) ) :
 endif;
 
 
-if ( ! function_exists( 'signal_entry_footer' ) ) :
+if ( ! function_exists( 'signal_post_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function signal_entry_footer() {
+	function signal_post_footer() {
 		if ( 'post' === get_post_type() && is_single() ) {
 		
 			/* translators: used between list items, there is a space after the comma */

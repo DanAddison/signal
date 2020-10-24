@@ -4,8 +4,8 @@
 function register_portfolio_custom_post_type() {
 
 	$labels = array(
-		'name'                  => 'Projects',
-		'singular_name'         => 'Project',
+		'name'                  => 'Portfolio',
+		'singular_name'         => 'Portfolio Project',
 		'menu_name'             => 'Portfolio',
 		'name_admin_bar'        => 'Portfolio',
 		'archives'              => 'Portfolio',
@@ -24,7 +24,7 @@ function register_portfolio_custom_post_type() {
 		'not_found_in_trash'    => 'No portfolio projects found in Trash',
 	);
 	$args = array(
-		'label'                 => 'Project',
+		'label'                 => 'Portfolio',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor' ),
 		'hierarchical'          => false,
@@ -37,7 +37,7 @@ function register_portfolio_custom_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => false, // change to true if client wants dynamic archive of all projects by date instead of a manually composed Portfolio page
+		'has_archive'           => true, // change to true if client wants dynamic archive of all projects by date instead of a manually composed Portfolio page
 		'show_in_rest'          => true,
 	);
 	register_post_type( 'portfolio', $args );
@@ -46,9 +46,9 @@ function register_portfolio_custom_post_type() {
 add_action( 'init', 'register_portfolio_custom_post_type', 0 );
 
 $portfolio_categories_taxonomy_args = array(
-	'label' => __( 'Project Categories' ),
+	'label' => __( 'Portfolio Categories' ),
 	'labels' => array(
-		'singular_name' => __( 'Project Category' ),
+		'singular_name' => __( 'Portfolio Category' ),
 	),
 	'public' => true,
 	'hierarchical' => true,
@@ -56,11 +56,11 @@ $portfolio_categories_taxonomy_args = array(
 	'show_in_rest' => true,
 	'show_admin_column' => true,		
 	'rewrite' => array(
-		'slug' => 'project-categories',
+		'slug' => 'portfolio/category',
 		'with_front' => false,
 	),
 );
-register_taxonomy( 'ct_project_category', 'portfolio', $portfolio_categories_taxonomy_args );
+register_taxonomy( 'ct_portfolio_category', 'portfolio', $portfolio_categories_taxonomy_args );
 
 // if single-{cpt_name}.php won't load even after visiting Permalinks in admin, this shuld do it:
 // function theme_prefix_rewrite_flush() {
