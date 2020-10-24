@@ -1,0 +1,52 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.15, 1.15);
+  }
+}
+
+.nebulo-credit {
+  position: relative;
+
+  a:hover .logo-circle::after {
+    animation-duration: 0.4s;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.logo-circle {
+  display: inline-block;
+  margin-right: 0.25em;
+  margin-bottom: -3px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  &::before {
+    content: "";
+    background: #53c9c8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    background: var(--footer-bg-color);
+    width: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+  }
+}

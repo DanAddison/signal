@@ -1,0 +1,120 @@
+.site-header {
+  z-index: 1;
+  position: relative;
+  justify-content: space-between;
+  @include center-block;
+  display: flex;
+  padding-top: $spacing/2;
+  padding-bottom: $spacing/2;
+  // side margin instead of padding so that bottom border doesn't span full width
+  margin-left: $spacing/2;
+  margin-right: $spacing/2;
+  border-bottom: 1px solid $grey;
+
+  @include mq($bp-s) {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
+
+  @include mq($bp-l) {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  @include mq($bp-xl) {
+    margin-left: $spacing * 2;
+    margin-right: $spacing * 2;
+  }
+}
+
+.site-branding {
+  z-index: -1;
+  flex: 1;
+  align-self: center;
+
+  .site-title {
+    display: none;
+    // margin: 0;
+    // font-size: em(32);
+    // font-weight: 700;
+    // text-align: right;
+
+    // @include mq($bp-l) {
+    //   text-align: center;
+    // }
+
+    // a {
+    //   text-decoration: none;
+    // }
+  }
+
+  .site-logo {
+    min-width: 230px;
+    max-width: 280px;
+    height: 28px;
+    font-size: 1em;
+    background-size: contain;
+    position: relative;
+    margin-left: auto;
+    @include mq($bp-l) {
+      margin-right: auto;
+    }
+
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: right;
+
+      @include mq($bp-l) {
+        text-align: center;
+      }
+
+      svg {
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.site-logo svg {
+  // fill: var(--primary-color);
+  fill: black;
+}
+
+.hamburger-container {
+  text-align: left;
+  flex: 1;
+  align-self: center;
+  margin-bottom: -4px;
+}
+
+button.menu-button {
+  padding: 0;
+  margin-top: 4px;
+  font-size: 0.7em;
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: var(--font-color);
+  }
+
+  @include mq($bp-l) {
+    font-size: 0.8em;
+  }
+}
+
+.woo-nav {
+  display: none;
+}
+@include mq($bp-l) {
+  .woo-nav {
+    display: block;
+    flex: 1;
+    align-self: center;
+  }
+}

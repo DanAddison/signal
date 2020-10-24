@@ -1,0 +1,238 @@
+{
+    "key": "group_5db30205bf40e",
+    "title": "Block: Link Card",
+    "fields": [
+        {
+            "key": "field_5db30210d0d04",
+            "label": "Card Image",
+            "name": "card_image",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "cover_s",
+            "library": "all",
+            "min_width": 800,
+            "min_height": 480,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5db30271d0d05",
+            "label": "Card Title",
+            "name": "card_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5dc16ebf663f6",
+            "label": "Choose Link Type",
+            "name": "choose_link_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "page": "Page",
+                "category": "Project Category",
+                "project": "Project",
+                "product": "Product",
+                "external": "External"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dc6a1e99d821",
+            "label": "Page Link",
+            "name": "page_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dc16ebf663f6",
+                        "operator": "==",
+                        "value": "page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5db3029bd0d07",
+            "label": "Category Link",
+            "name": "category_link",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dc16ebf663f6",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "ct_project_category",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_5dc16d8307d6b",
+            "label": "Project Link",
+            "name": "project_link",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dc16ebf663f6",
+                        "operator": "==",
+                        "value": "project"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "portfolio"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5dc16e5a663f4",
+            "label": "Product Link",
+            "name": "product_link",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dc16ebf663f6",
+                        "operator": "==",
+                        "value": "product"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5dc16e9a663f5",
+            "label": "External Link",
+            "name": "external_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dc16ebf663f6",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/link-card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1573298761
+}

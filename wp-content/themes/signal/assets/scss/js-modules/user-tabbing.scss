@@ -1,0 +1,11 @@
+/*********************************************************
+Add focus outline for keyboard users - gets class from user-tabbing.js
+Focus outline property is set to none by default in elements.scss
+*********************************************************/
+body.user-is-tabbing button:focus,
+body.user-is-tabbing input:focus,
+body.user-is-tabbing select:focus,
+body.user-is-tabbing textarea:focus,
+body.user-is-tabbing a:focus {
+  outline: thin dotted blue;
+}

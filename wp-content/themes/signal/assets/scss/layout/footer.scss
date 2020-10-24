@@ -1,0 +1,114 @@
+.site-footer {
+  padding-top: $spacing/2;
+  padding-bottom: $spacing/2;
+  // side margin instead of padding so that bottom border doesn't span full width
+  margin-left: $spacing;
+  margin-right: $spacing;
+  border-top: 1px solid $grey;
+
+  @include mq($bp-l) {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  @include mq($bp-xl) {
+    margin-left: $spacing * 2;
+    margin-right: $spacing * 2;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.sub-footer {
+  @include mq-max($bp-columns) {
+    .column {
+      padding-top: 0;
+    }
+    .column--copyright {
+      padding-bottom: 0;
+    }
+  }
+
+  .column--copyright {
+    @include mq($bp-columns) {
+      order: -1;
+    }
+  }
+  p {
+    font-size: em(16);
+  }
+
+  .legal__copyright {
+    margin-bottom: 0.25em;
+  }
+}
+
+// Company address details
+// .footer-contacts {
+//   margin-bottom: 3em;
+
+//   p ~ p {
+//     margin: $spacing/2 0 0 0;
+//   }
+
+//   .contacts__name {
+//     font-weight: bold;
+//   }
+
+//   .contacts__phone {
+//     margin-top: 0;
+//   }
+
+//   .contacts__address {
+//     p {
+//       margin: 0;
+//     }
+//   }
+
+//   @include mq($bp-l) {
+//     width: 60%;
+//   }
+// }
+
+// newsletter signup form
+#mce-EMAIL {
+  width: 210px;
+  margin-bottom: 0.5em;
+}
+#mc-embedded-subscribe-form {
+  margin-bottom: 0;
+}
+.site-footer {
+  .newsletter-intro {
+    margin-top: 0.5em;
+    max-width: 300px;
+    font-size: em(15);
+    font-style: italic;
+    color: $grey;
+
+    @include mq($bp-l) {
+      margin-left: auto;
+    }
+  }
+
+  input#mc-embedded-subscribe.button {
+    width: 210px;
+    transition: all 0.2s;
+    font-family: $headings-face;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+    }
+  }
+}
+
+// override a stubborn WC style
+.woocommerce input#mc-embedded-subscribe.button {
+  font-size: 14px;
+}

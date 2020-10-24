@@ -1,0 +1,48 @@
+{
+    "key": "group_5dc0148f138d2",
+    "title": "Project Featured Image",
+    "fields": [
+        {
+            "key": "field_5dc014a149738",
+            "label": "Project Featured Image",
+            "name": "project_image",
+            "type": "image",
+            "instructions": "Full width responsive image, cropped to aspect ratio of 10:6.\r\nAlso used to represent this project as a summary image in category archives.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "cover_s",
+            "library": "all",
+            "min_width": 2200,
+            "min_height": 1320,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1573292804
+}

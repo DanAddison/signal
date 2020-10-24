@@ -1,0 +1,40 @@
+.search-form {
+  margin-bottom: 0;
+
+  label {
+    position: relative;
+  }
+
+  .search-field {
+    max-width: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s linear all;
+    padding-right: 2em;
+    font-size: 16px;
+    margin-bottom: 0;
+
+    &:focus {
+      max-width: 100%;
+      opacity: 1;
+    }
+  }
+
+  .icon-search {
+    cursor: pointer;
+    margin-left: 0.25em;
+  }
+
+  // .search-submit {
+  //   position: absolute;
+  //   right: 6px;
+  //   height: 2em;
+  //   margin-bottom: 0;
+  //   padding: 0;
+  //   color: $copy;
+  //   text-align: center;
+  //   font-size: em(14);
+  //   background-color: inherit;
+  //   border: none;
+  // }
+}

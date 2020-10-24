@@ -1,0 +1,41 @@
+.menu li {
+  padding-bottom: $spacing/3;
+
+  a {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    line-height: 1.25;
+    padding: 3px 6px;
+    text-decoration: none;
+
+    // fancy hover animation
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -4px;
+      right: -4px;
+      background-color: var(--menu-hover-animation);
+      transform-origin: center top;
+      transform: scaleY(0);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      transform-origin: center bottom;
+      transform: scaleY(1);
+    }
+  }
+}
+
+.menu .current-menu-item a::before {
+  transform-origin: center bottom;
+  transform: scaleY(1);
+}

@@ -1,0 +1,79 @@
+/*********************************************************
+## Front page template
+*********************************************************/
+.home .site-header {
+  display: none;
+}
+
+.page--home .row {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.homepage-logo {
+  flex-shrink: 1;
+  svg {
+    display: block;
+    object-fit: contain;
+    height: auto;
+    max-height: 70vh;
+    max-width: 100%;
+    margin: $spacing auto 0;
+
+    @include mq($bp-l) {
+      margin-top: 0;
+    }
+  }
+}
+
+.homepage-links.column-container {
+  flex-shrink: 0;
+  margin-top: $spacing * 2;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  a {
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: $headings-face;
+    padding: 0.25em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid var(--font-color);
+    border-radius: 3px;
+    transition: all 0.2s;
+
+    @include mq($bp-s) {
+      font-size: 1.25rem;
+    }
+
+    &:hover,
+    &:focus {
+      // color: $white;
+      background-color: var(--link-hover);
+    }
+  }
+}
+
+/*********************************************************
+## General page template
+*********************************************************/
+
+.site-main {
+  .page__title,
+  .page-title,
+  .post__title,
+  .taxonomy-archive__title {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.page__entry {
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}

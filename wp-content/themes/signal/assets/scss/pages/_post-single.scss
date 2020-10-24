@@ -1,0 +1,24 @@
+.post {
+  background-color: $white;
+  padding-top: $spacing;
+
+  @include mq($bp-l) {
+    padding-top: $spacing * 2;
+    padding-bottom: $spacing * 2;
+  }
+
+  .post-date {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+    color: $grey-dark;
+    border-bottom: 1px solid $grey-lightest;
+  }
+
+  .post__title {
+    margin-top: 0.5em;
+  }
+
+  .post__entry {
+    margin-bottom: $spacing;
+  }
+}

@@ -1,0 +1,51 @@
+// functionality
+.current-menu-ancestor > .sub-menu.level-1 {
+  @include hide-visually("unhide");
+  opacity: 1;
+}
+
+// if menu item is 2 levels deep, also open the top level
+.current_page_ancestor
+  > .sub-menu.level-1
+  > .current-menu-parent
+  > .sub-menu.level-2 {
+  @include hide-visually("unhide");
+  opacity: 1;
+}
+
+.sub-menu {
+  @include hide-visually("hide");
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.sub-menu--active {
+    @include hide-visually("unhide");
+    opacity: 1;
+  }
+}
+
+.sub-menu--active {
+  + .indicator {
+    display: none !important;
+  }
+}
+
+.is-visible-sub-menu .site-header {
+  overflow: visible;
+}
+
+// styling
+.menu--main .sub-menu {
+  margin-left: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+
+  li {
+    display: block;
+
+    a {
+      white-space: nowrap;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+}

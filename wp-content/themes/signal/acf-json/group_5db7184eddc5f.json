@@ -1,0 +1,39 @@
+{
+    "key": "group_5db7184eddc5f",
+    "title": "Block: Button",
+    "fields": [
+        {
+            "key": "field_5db718545d330",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/button"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1572280433
+}

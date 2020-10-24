@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    Sizes
+\*------------------------------------*/
+$bp-xs: 18.75em; // 300
+$bp-s: 26.25em; // 420
+$bp-m: 37.5em; // 600
+$bp-l: 56.25em; // 900
+$bp-xl: 68.75em; // 1100
+$bp-xxl: 81.25em; // 1300
+
+$content-max-width: 850px; // has to be in pixels else headings will be wider
+$shop-width: 112.5em; // 1800px
+$max-width: 137.5em; // 2200px
+$bp-menu: 62.5em;
+$bp-columns: $bp-l;
+
+// spacing
+$spacing: 2em;
+$spacing-percent: 3%; // Used by grid system
+
+// sizes map
+$bp-sizes: (
+  bp-xs: $bp-xs,
+  bp-s: $bp-s,
+  bp-m: $bp-m,
+  bp-l: $bp-l,
+  bp-xl: $bp-xl,
+  bp-xxl: $bp-xxl,
+  bp-menu: $bp-menu
+);
+
+/*------------------------------------*\
+    Font Variables
+\*------------------------------------*/
+
+$copy-face: "Roboto Slab", serif;
+$headings-face: "Montserrat", "Lucida Grande", sans-serif;
+$headings-weight: normal;
+
+$footer-font-size: 1em;
+
+/*------------------------------------*\
+    Colours
+\*------------------------------------*/
+$white: #fff;
+$grey-light: #d5d5d5;
+$grey: #bdbdbd;
+$grey-dark: #9a9a9a;
+$black: #000;
+
+$primary: #111;
+
+$copy: #111;
+$headings: $copy;
+// $footer-copy: $grey-light;
+
+$canvas-light: #fafafa;
+$canvas-medium: $grey-light;
+$canvas-dark: $grey-dark;
+
+/*------------------------------------*\
+    Dark mode
+\*------------------------------------*/
+:root {
+  --primary-color: #222;
+  --font-color: #222;
+  --headings-color: #222;
+  --grey-font-color: #5c5c5c;
+  --bg-color: #fff;
+  --sidenav-bg-color: #f5f5f5;
+  --input-bg-color: #fff;
+  --action-color: #334788;
+  --action-hover: #1c41bb;
+  --menu-hover-animation: rgba(82, 39, 76, 0.153);
+}
+
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --font-color: #fff;
+  --headings-color: #fff;
+  --grey-font-color: #b8b8b8;
+  --bg-color: #282828;
+  --sidenav-bg-color: #4a4a4a;
+  --input-bg-color: #bbb;
+  --action-color: #334788;
+  --action-hover: #1c41bb;
+  --menu-hover-animation: rgba(210, 182, 205, 0.153);
+}
+
+/*------------------------------------*\
+    Gutenberg color options
+\*------------------------------------*/
+// -- see editor-color-palette in gutenberg-settings.php
+$colors: (
+  white: $white,
+  black: $black,
+  grey: var(--grey-font-color),
+  primary: $primary
+);
+
+@each $name, $color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}

@@ -1,0 +1,16 @@
+/*********************************************************
+## Portfolio archives:
+  archive-portfolio.php template (if in use)
+  taxonomy.php template
+*********************************************************/
+
+.taxonomy-archive__header .taxonomy-archive__description {
+  > p {
+    margin-left: 0;
+  }
+}
+
+.portfolio-archive__title,
+.taxonomy-archive__title {
+  margin: 0.5em 0;
+}
