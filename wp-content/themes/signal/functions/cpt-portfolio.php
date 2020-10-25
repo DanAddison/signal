@@ -37,7 +37,7 @@ function register_portfolio_custom_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true, // change to true if client wants dynamic archive of all projects by date instead of a manually composed Portfolio page
+		'has_archive'           => false, // change to true if client wants dynamic archive of all projects by date instead of a manually composed Portfolio page
 		'show_in_rest'          => true,
 	);
 	register_post_type( 'portfolio', $args );

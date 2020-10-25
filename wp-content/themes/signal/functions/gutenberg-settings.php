@@ -29,10 +29,7 @@ function signal_allowed_block_types() {
 		
 		// our own custom blocks
 		'acf/spacing',
-		'acf/project-meta',
-		// 'acf/page-heading',
-		// 'acf/link-card',
-		// 'acf/cover-image'
+		'acf/project-grid',
 		);
 }
 add_filter( 'allowed_block_types', 'signal_allowed_block_types', 10, 2 );

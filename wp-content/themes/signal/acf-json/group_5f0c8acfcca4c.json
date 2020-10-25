@@ -1,21 +1,28 @@
 {
-    "key": "group_5db7184eddc5f",
-    "title": "Block: Button",
+    "key": "group_5f0c8acfcca4c",
+    "title": "Block: Project Grid",
     "fields": [
         {
-            "key": "field_5db718545d330",
-            "label": "Button Link",
-            "name": "button_link",
-            "type": "link",
+            "key": "field_5f958197bf8f4",
+            "label": "Project Grid",
+            "name": "acf_project_grid",
+            "type": "post_object",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "post_type": [
+                "portfolio"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
         }
     ],
     "location": [
@@ -23,7 +30,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/button"
+                "value": "acf\/project-grid"
             }
         ]
     ],
@@ -33,7 +40,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1572280433
+    "modified": 1603633824
 }

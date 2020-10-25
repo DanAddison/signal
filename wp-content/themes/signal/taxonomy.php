@@ -9,21 +9,19 @@
 get_header(); ?>
 <main id="main" class="site-main">
   <div id="primary" class="content-area">
-    
-    <div class="row row--pad">
       
 			<?php
 			if ( have_posts() ) : ?>
 
+
+
+		<div class="row row--pad">
+	
 			<header class="taxonomy-archive__header">
 				<h1 class="taxonomy-archive__title ">Category: <?php single_term_title(); ?></h1>
 				<!-- the description for an author, post type, or term archive -->
 				<div class="taxonomy-archive__description"><?php the_archive_description(); ?></div>
 			</header>
-
-		</div><!-- .row -->	
-
-		<div class="row row--pad">
 
 				<div class="column-container column-container--grid">
 						

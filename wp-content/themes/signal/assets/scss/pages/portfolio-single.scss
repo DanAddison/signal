@@ -11,13 +11,9 @@
     margin-top: 1em;
   }
 
-  .project-categories {
-    margin-left: 0;
-    padding-bottom: $spacing;
-    a {
-      &:not(:last-child):after {
-        content: ",";
-      }
+  .post__categories {
+    p {
+      margin-bottom: 0;
     }
   }
 }

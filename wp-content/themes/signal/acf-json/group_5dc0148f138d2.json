@@ -7,8 +7,8 @@
             "label": "Project Featured Image",
             "name": "project_image",
             "type": "image",
-            "instructions": "Thumbnail image used to represent this project as a preview tile on Portfolio archive pages.",
-            "required": 0,
+            "instructions": "Thumbnail image used in the preview tile on Portfolio archive grids.\r\nMinimum dimensions 900px width by 700px height",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -16,10 +16,10 @@
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "cover_s",
+            "preview_size": "thumbnail",
             "library": "all",
-            "min_width": 2200,
-            "min_height": 1320,
+            "min_width": 900,
+            "min_height": 700,
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603543724
+    "modified": 1603640812
 }

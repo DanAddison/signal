@@ -19,7 +19,7 @@ get_header(); ?>
 		<?php the_post(); ?>
 		<article class="page">
 
-		<?php get_template_part( 'parts/page-entry' ); ?>
+			<?php get_template_part( 'parts/page-entry' ); ?>
 
 		</article>
 

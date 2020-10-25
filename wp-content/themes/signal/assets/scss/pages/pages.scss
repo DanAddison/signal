@@ -57,23 +57,3 @@
     }
   }
 }
-
-/*********************************************************
-## General page template
-*********************************************************/
-
-.site-main {
-  .page__title,
-  .page-title,
-  .post__title,
-  .taxonomy-archive__title {
-    margin: 0;
-    max-width: none;
-  }
-}
-
-.page__entry {
-  h2:first-of-type {
-    margin-top: 0;
-  }
-}

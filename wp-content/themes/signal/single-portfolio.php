@@ -20,7 +20,7 @@ get_header(); ?>
 				</div>			
 
 				<?php if( has_term( '', 'ct_portfolio_category' ) ) : ?>
-				<div href="" class="post__categories">
+				<div class="post__categories">
 					<p class="title">Project Categories:</p>
 					<?php echo get_the_term_list( get_the_ID(), 'ct_portfolio_category', '', ' &sol; ' ); ?>
 				</div>
