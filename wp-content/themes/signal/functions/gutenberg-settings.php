@@ -4,28 +4,57 @@
 function signal_allowed_block_types() {
 
 	return array(
-		'core/heading',
+		// common blocks
 		'core/paragraph',
+		'core/heading',
 		'core/list',
-		'core/table',
-		'core/columns',
-		'core/file',
-		'core/verse',
-		'core/quote',
 		'core/image',
+		'core/gallery',
+		'core/quote',
+		'core/file',
 		// 'core/cover',
-		// 'core/gallery', // need to do work to serve only thumbnail size
-		'core/media-text',
+		// 'core/audio',
+		// 'core/video',
+		
+		// formatting
+		'core/html', // eg. to embed iFrames
+		'core/table',
+		// 'core/pullquote',
+		// 'core/freeform', // classic editor block
+		'core/verse', // <pre> tag: includes text align options, eg. for poetry or song lyrics
+		// 'core/code', // <pre> tag: includes <code> element for specific styling eg. grey background colour
+		// 'core/preformatted', // <pre> tag: similar to code block but with more styling options
+		
+		// layout
+		'core/columns',
 		'core/separator',
+		'core/media-text',
+		'core/group',
+		'core/buttons',
+		// 'core/spacer', // extended for responsiveness in my editor.js file
+		// 'core/nextpage', // for adding page break (but doesn't produce pagination for me?)
+
+		// widgets
 		'core/shortcode',
+		'core/search',
 		'core/social-links',
+		// 'core/latest-posts', // loads of options.. but probably never quite enough!
+
+		// embeds
 		'core-embed/twitter',
 		'core-embed/instagram',
-		'core-embed/soundcloud',
 		'core-embed/youtube',
 		'core-embed/vimeo',
+		'core-embed/soundcloud',
+		'core-embed/facebook',
+		'core-embed/tiktok',
+		'core-embed/meetup-com',
 
-		// woocommerce blocks
+		// reusable
+		'core/block',
+
+		// third party
+		// 'wpforms/form-selector',
 		
 		// our own custom blocks
 		'acf/spacing',
