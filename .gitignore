@@ -103,5 +103,9 @@ Thumbs.db
 # track the relevant starter-theme or child-theme
 !wp-content/themes/signal/
 
+# track the build process 'theme'
+!wp-content/themes/gulp-dev/gulpfile.js
+!wp-content/themes/gulp-dev/package.json
+
 # ignore compiled assets
 wp-content/themes/signal/assets/compiled/*
